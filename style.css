@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.dino{
+    background-image: url(./goku.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 242px;
+    height: 240px;
+    position: absolute;
+    bottom:10px;
+    left: 52px;
+    transform: scaleX(-1);
+}
+
+.obstacle{
+    width: 154px;
+    height: 260px;
+    background-image: url(Daco_4938885.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 5px;
+    left: 44vw;
+}
+
+.animateDino{
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver{
+    position: relative;
+    top:103px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+    margin: auto;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 60vw;
+    border: 3px solid hsla(0, 0%, 0%, 0.993);
+    border-radius: 50px;
+}
+
+#scoreCont{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(230, 201, 38);
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 40px;
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
