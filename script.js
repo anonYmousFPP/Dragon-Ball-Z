@@ -43,15 +43,14 @@ setInterval(() => {
     // console.log(offsetX, offsetY)
     if (offsetX < 60 && offsetY < 52) {
         gameOver.innerHTML = "Game Over - Reload to Play Again"
-        // gameEnding.innerHTML =  "Game Over - Reload to Play Again"
         obstacle.classList.remove('obstacleAni')
-        audiogo.play();
         audio.pause();
+        audiogo.play();
         setTimeout(() => {
             audiogo.pause();
         }, 3500);    }
     else if (offsetX < 145 && cross) {
-        score += 10;
+        score += 1;
         updateScore(score);
         cross = false;
         setTimeout(() => {
